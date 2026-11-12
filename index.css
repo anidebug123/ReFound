@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF8F3;
+    color: #242424;
+    font-family: 'DM Sans', Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: 'Playfair Display', 'DM Serif Display', Georgia, serif;
+  }
+}
+
+/* Custom Masonry column CSS for smooth CSS Columns fallback / layout */
+.masonry-grid {
+  column-count: 1;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1280px) {
+  .masonry-grid {
+    column-count: 4;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #EAE7DF;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D5D1C6;
+}
+
+/* Clean image loading transitions */
+img {
+  content-visibility: auto;
+}
+
